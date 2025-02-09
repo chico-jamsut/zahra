@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Dakwah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b3954;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            
+        }
+
+        .section-awal {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .section-awal button {
+            width: 150px;
+            padding: 12px;
+            font-size: 1em;
+            font-weight: 600;
+            background: linear-gradient(45deg, #D4AF37, #B8860B);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 223, 186, 0.5);
+        }
+
+        .section-awal button:hover {
+            background: linear-gradient(45deg, #B8860B, #8B6508);
+            transform: scale(1.05);
+        }
+
+        .container {
+            background: #1a1d1f;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 223, 186, 0.5);
+            max-width: 500px;
+            width: 100%;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+        }
+
+        .container.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        header h1 {
+            color: #D4AF37;
+            font-size: 2.5em;
+        }
+
+        .details, .cta, h2{
+            color: #D4AF37;
+        }
+        .details, .cta, .content, .dakwah {
+            background: #222831;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+
+        .cta .whatsapp-button {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.5);
+        }
+
+        .cta .whatsapp-button:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #D4AF37;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .slide-up {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="section-awal" id="initial-content">
+        <header>
+            <h1>Undangan Dakwah</h1>
+            <p>Mari hadiri kajian islami bersama kami</p>
+        </header>
+        <button id="open-invitation">Buka Undangan</button>
+    </div>
+
+    <div class="container hidden" id="new-content">
+        <section class="details">
+            <h2>Detail Acara</h2>
+            <p><strong>Tema:</strong> Seorang pemimpin dalam Islam</p>
+            <p><strong>Pembicara:</strong> Azzahra Pratiwi </p>
+            <p><strong>Tanggal:</strong> Selasa, 11 Februari 2025</p>
+            <p><strong>Waktu:</strong> 08.00 - 12.00 WIB</p>
+            <p><strong>Tempat:</strong> SMK Infokom</p>
+        </section>
+        <section class="cta">
+            <h2>Konfirmasi Kehadiran</h2>
+            <p>Silakan konfirmasi kehadiran Anda melalui WhatsApp:</p>
+            <a href="https://wa.me/6289501924702?text=Halo%20saya%20akan%20hadir" 
+            class="whatsapp-button">
+            Konfirmasi via WhatsApp
+         </a>
+         
+        </section>
+
+        <section class="dakwah">
+            <h2>Mengutip dari Hadis Rasulullah SAW</h2>
+            <p>
+                أَنَّ رَسُولَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَالَ أَلَا كُلُّكُمْ رَاعٍ وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ 
+                <br>
+                <strong>Artinya:</strong> Ketahuilah setiap kalian adalah pemimpin, dan setiap kalian akan dimintai pertanggungjawabannya atas yang dipimpin. 
+                <br>
+                Bahwa kita baik kaum laki-laki maupun perempuan adalah seorang pemimpin dan kelak kita akan dimintai pertanggungjawaban atas apa yang kita pimpin. Laki-laki pemimpin keluarga dan perempuan pemimpin anak-anak dari suaminya. Bukan hanya ini bahkan kita adalah pemimpin bagi anggota tubuh kita sendiri. Apa yang kita perbuat di dunia akan dimintai pertanggungjawaban kelak di akhirat. 
+                <br>
+                Sebagaimana Allah Berfirman dalam surat Yasin ayat 65: 
+                <br>
+                <strong>Artinya:</strong> "Pada hari ini Kami tutup mulut mereka; dan berkatalah kepada Kami tangan mereka dan memberi kesaksianlah kaki mereka terhadap apa yang dahulu mereka usahakan."
+            </p>
+        </section>
+        <footer>
+            <p>&copy; 2023 Undangan Dakwah. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('open-invitation').addEventListener('click', function() {
+            const initialContent = document.getElementById('initial-content');
+            const newContent = document.getElementById('new-content');
+
+            initialContent.style.opacity = "0";
+            initialContent.style.transform = "translateY(-20px)";
+
+            initialContent.classList.add('slide-up');
+            setTimeout(() => {
+                initialContent.classList.add('hidden');
+                newContent.classList.remove('hidden');
+                newContent.classList.add('visible');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
